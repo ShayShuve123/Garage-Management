@@ -8,15 +8,18 @@ namespace Ex03.GarageLogic.Types_of_vehicles
 {
     public class Car : Vehicle
     {
+        //data members//
         private eVehicleColor m_Color;
         private eNumberOfDoors m_NumberOfDoors;
 
-        public Car()
-        {
-          
-        }
 
 
+        //constractor//
+
+
+        //get & set -proprtis //
+
+        //mathods//
 
 
     }

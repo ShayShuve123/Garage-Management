@@ -8,10 +8,21 @@ namespace Ex03.GarageLogic
 {
     public class Customer
     {
+        //data members//
         private string m_CustomerName;
         private string m_CustomerPhoneNumber;
         private eVehicleStatus m_CustomerStatus;
         private Vehicle m_VehicleCustomer;
+
+     
+
+
+        //constractor//
+
+
+        //get & set -proprtis //
+
+        //mathods//
 
     }
 }

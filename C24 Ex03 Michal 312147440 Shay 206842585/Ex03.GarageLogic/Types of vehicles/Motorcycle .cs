@@ -8,8 +8,18 @@ namespace Ex03.GarageLogic.Types_of_vehicles
 {
     internal class Motorcycle : Vehicle
     {
-        private int m_EngineVolumeCC;
+        //data members//
         private eLicenseType m_LicenseType;
+        private int m_EngineVolumeCC;
+
+
+
+        //constractor//
+
+
+        //get & set -proprtis //
+
+        //mathods//
 
     }
 }

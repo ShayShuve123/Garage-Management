@@ -62,17 +62,22 @@ namespace Ex03.GarageLogic  //fix the mathods  encpsolation -internal/public/pro
         //mathods//
         public void InflateWheel(float i_AirToAdd) //virtual or protected ? more alings   //private????
         {
-
-            if (m_CurrentAirPressure + i_AirToAdd <= r_MaxAirPressureByManufacturer)
+            try
             {
-                m_CurrentAirPressure += i_AirToAdd;
+                if (m_CurrentAirPressure + i_AirToAdd <= r_MaxAirPressureByManufacturer)
+                {
+                    m_CurrentAirPressure += i_AirToAdd;
+                }
+                else
+                {
+                    throw new ValueOutOfRangeException(0, r_MaxAirPressureByManufacturer, "Cannot inflate beyond max air pressure.");
+
+                }
             }
-            else
+            catch (ValueOutOfRangeException ex)
             {
-                throw new ValueOutOfRangeException(0, r_MaxAirPressureByManufacturer, "Cannot inflate beyond max air pressure.");
-
+                Console.WriteLine(ex.Message);  // הודעת שגיאה עבור כמות דלק שעוברת את הקיבולת
             }
-
         }
 
 

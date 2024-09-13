@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using static Ex03.GarageLogic.Enums;
 
 namespace Ex03.GarageLogic
 {
@@ -31,7 +32,7 @@ namespace Ex03.GarageLogic
             }
         }
 
-        public abstract void FillEnergySource(float i_AmountToAdd);
+        public abstract void FillEnergySource(float i_EnergySourceAmountToAdd, object i_IsFuelType = null); 
 
     }
 }

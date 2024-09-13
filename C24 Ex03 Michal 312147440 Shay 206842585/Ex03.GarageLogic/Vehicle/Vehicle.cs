@@ -10,7 +10,7 @@ namespace Ex03.GarageLogic//remmber to change this namespace when i arraneg the 
     {
         //data members//
         private string m_ModelName;
-        private string m_LicenseNumber;//TO chack if in realty license number supposed to change?
+        private string m_LicenseNumber;
         protected Wheel[] m_Wheels; //why not list ? askk
         private VehicleEngine m_Engine; 
 
