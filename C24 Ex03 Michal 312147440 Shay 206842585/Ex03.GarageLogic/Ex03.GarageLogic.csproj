@@ -36,7 +36,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Customer.cs" />
+    <Compile Include="ElectricEngine .cs" />
     <Compile Include="Enums.cs" />
+    <Compile Include="FuelEngine.cs" />
     <Compile Include="Types of vehicles\Car.cs" />
     <Compile Include="Types of vehicles\Motorcycle .cs" />
     <Compile Include="Types of vehicles\Truck.cs" />
