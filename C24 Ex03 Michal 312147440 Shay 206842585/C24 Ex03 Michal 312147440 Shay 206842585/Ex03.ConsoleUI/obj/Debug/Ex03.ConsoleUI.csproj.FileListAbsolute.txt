@@ -1,0 +1,9 @@
+C:\MyProjectsC#\C24 Ex03 Michal 312147440 Shay 206842585\Ex03.ConsoleUI\obj\Debug\Ex03.ConsoleUI.csproj.AssemblyReference.cache
+C:\MyProjectsC#\C24 Ex03 Michal 312147440 Shay 206842585\Ex03.ConsoleUI\obj\Debug\Ex03.ConsoleUI.csproj.CoreCompileInputs.cache
+C:\MyProjectsC#\C24 Ex03 Michal 312147440 Shay 206842585\Ex03.ConsoleUI\bin\Debug\Ex03.ConsoleUI.exe
+C:\MyProjectsC#\C24 Ex03 Michal 312147440 Shay 206842585\Ex03.ConsoleUI\bin\Debug\Ex03.ConsoleUI.pdb
+C:\MyProjectsC#\C24 Ex03 Michal 312147440 Shay 206842585\Ex03.ConsoleUI\bin\Debug\Ex03.GarageLogic.dll
+C:\MyProjectsC#\C24 Ex03 Michal 312147440 Shay 206842585\Ex03.ConsoleUI\bin\Debug\Ex03.GarageLogic.pdb
+C:\MyProjectsC#\C24 Ex03 Michal 312147440 Shay 206842585\Ex03.ConsoleUI\obj\Debug\Ex03.Con.97A6B4C2.Up2Date
+C:\MyProjectsC#\C24 Ex03 Michal 312147440 Shay 206842585\Ex03.ConsoleUI\obj\Debug\Ex03.ConsoleUI.exe
+C:\MyProjectsC#\C24 Ex03 Michal 312147440 Shay 206842585\Ex03.ConsoleUI\obj\Debug\Ex03.ConsoleUI.pdb
