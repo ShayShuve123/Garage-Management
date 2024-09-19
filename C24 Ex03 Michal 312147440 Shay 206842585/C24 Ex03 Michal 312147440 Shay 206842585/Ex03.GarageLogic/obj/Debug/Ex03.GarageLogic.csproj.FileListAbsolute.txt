@@ -1,6 +1,0 @@
-C:\MyProjectsC#\C24 Ex03 Michal 312147440 Shay 206842585\Ex03.GarageLogic\obj\Debug\Ex03.GarageLogic.csproj.AssemblyReference.cache
-C:\MyProjectsC#\C24 Ex03 Michal 312147440 Shay 206842585\Ex03.GarageLogic\obj\Debug\Ex03.GarageLogic.csproj.CoreCompileInputs.cache
-C:\MyProjectsC#\C24 Ex03 Michal 312147440 Shay 206842585\Ex03.GarageLogic\bin\Debug\Ex03.GarageLogic.dll
-C:\MyProjectsC#\C24 Ex03 Michal 312147440 Shay 206842585\Ex03.GarageLogic\bin\Debug\Ex03.GarageLogic.pdb
-C:\MyProjectsC#\C24 Ex03 Michal 312147440 Shay 206842585\Ex03.GarageLogic\obj\Debug\Ex03.GarageLogic.dll
-C:\MyProjectsC#\C24 Ex03 Michal 312147440 Shay 206842585\Ex03.GarageLogic\obj\Debug\Ex03.GarageLogic.pdb
