@@ -32,10 +32,13 @@ namespace Ex03.GarageLogic
         public override string ToString()
         {
             StringBuilder engineDetails = new StringBuilder();
-            engineDetails.Append($"Engine Type : Electric");
-            engineDetails.AppendLine($"Remaining Battery Percentage: {this.RemainingEnergyPercent}%");
-            engineDetails.AppendLine($"Remaining Battery in Hours: {(this.RemainingEnergyPercent * this.EnergySourceMaxCapacity) / 100} hours");
-            engineDetails.Append($"Max Battery Capacity: {this.EnergySourceMaxCapacity} hours");
+
+            engineDetails.AppendLine("********** Electric Engine Details **********");
+            engineDetails.Append($"Engine Type : Electric\n");
+            engineDetails.AppendLine($"Remaining Battery Percentage: {this.RemainingEnergyPercent}%\n");
+            engineDetails.AppendLine($"Remaining Battery in Hours: {(this.RemainingEnergyPercent * this.EnergySourceMaxCapacity) / 100} hours\n");
+            engineDetails.Append($"Max Battery Capacity: {this.EnergySourceMaxCapacity} hours\n");
+            engineDetails.AppendLine("********************************************");
 
             return engineDetails.ToString();
 

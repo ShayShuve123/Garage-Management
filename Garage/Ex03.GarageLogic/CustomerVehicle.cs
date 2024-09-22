@@ -71,8 +71,10 @@ namespace Ex03.GarageLogic
         public override string ToString()
         {
             StringBuilder customerDetails = new StringBuilder();
+            customerDetails.AppendLine("******************* Customer Details *******************");
             customerDetails.AppendLine($"Customer Name: {m_CustomerName}");
             customerDetails.AppendLine($"Phone Number: {m_CustomerPhoneNumber}");
+            customerDetails.AppendLine("******************* Vehicle Information *******************");
             customerDetails.AppendLine($"Vehicle Status: {m_VehicleStatus}");
             customerDetails.AppendLine(m_Vehicle.ToString());
 

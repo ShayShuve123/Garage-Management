@@ -9,9 +9,9 @@ namespace Ex03.ConsoleUI
     {
         public static void Main(string[] args)
         {
-            UI garageUI = new UI(); // יצירת מופע של המחלקה UI
-            garageUI.StartGarageMenu(); // קריאה לפונקציה דרך המופע
-            
+            UI garageUI = new UI();
+            garageUI.StartGarageMenu();
+
         }
     }
 }

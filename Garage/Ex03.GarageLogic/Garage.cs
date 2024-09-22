@@ -14,7 +14,6 @@ namespace Ex03.GarageLogic
                         new Dictionary<string, CustomerVehicle>();
         bool isNotAlreadyInTheGarage = true;
 
-
         public Dictionary<string, CustomerVehicle> CustomerVehicles
         {
             get
@@ -28,31 +27,13 @@ namespace Ex03.GarageLogic
             }
         }
 
-        public bool ShowFullVehicleDetails(string i_LicenseNumber)
+        public bool isLicenseNumExist(string i_LicenseNumber)
         {
-            isNotAlreadyInTheGarage = true;
-
-            if (!m_CustomersVehicles.ContainsKey(i_LicenseNumber))
-            {
-                isNotAlreadyInTheGarage = false;
-            }
-
-            CustomerVehicle customerVehicle = m_CustomersVehicles[i_LicenseNumber];
-
-            Console.WriteLine(customerVehicle.ToString());
-
-            return isNotAlreadyInTheGarage;
+            return m_CustomersVehicles.ContainsKey(i_LicenseNumber);
         }
 
-        public bool chargeBattery(string i_LicenseNumber, float i_HoursToCharge)
+        public void chargeBattery(string i_LicenseNumber, float i_HoursToCharge)
         {
-            isNotAlreadyInTheGarage = true;
-
-            if (!m_CustomersVehicles.ContainsKey(i_LicenseNumber))
-            {
-                isNotAlreadyInTheGarage = false;
-            }
-
             CustomerVehicle customerVehicle = m_CustomersVehicles[i_LicenseNumber];
 
             if (customerVehicle.Vehicle.Engine is ElectricEngine electricEngine)
@@ -63,19 +44,10 @@ namespace Ex03.GarageLogic
             {
                 throw new ArgumentException("The vehicle does not have an electric engine and cannot be charged.");
             }
-
-            return isNotAlreadyInTheGarage;
         }
 
-        public bool refuelVehicle(string i_LicenseNumber, float i_FuelToAdd, eFuelType i_FuelType)
+        public void refuelVehicle(string i_LicenseNumber, float i_FuelToAdd, eFuelType i_FuelType)
         {
-            isNotAlreadyInTheGarage = true;
-
-            if (!m_CustomersVehicles.ContainsKey(i_LicenseNumber))
-            {
-                isNotAlreadyInTheGarage = false;
-            }
-
             CustomerVehicle customerVehicle = m_CustomersVehicles[i_LicenseNumber];
 
             if (customerVehicle.Vehicle.Engine is FuelEngine fuelEngine)
@@ -86,22 +58,16 @@ namespace Ex03.GarageLogic
             {
                 throw new ArgumentException("The vehicle does not have a fuel engine and cannot be refuled.");
             }
-
-            return isNotAlreadyInTheGarage;
         }
 
-        public bool ChangeVehicleStatus(string i_LicenseNumber, Enums.eVehicleStatus eVehicleStatus)
+        public void ChangeVehicleStatus(string i_LicenseNumber, Enums.eVehicleStatus eVehicleStatus)
         {
-            bool isNotAlreadyInTheGarage = true;
-
             if (!m_CustomersVehicles.ContainsKey(i_LicenseNumber))
             {
-                isNotAlreadyInTheGarage = false;
+                throw new ArgumentException("Licence number doesn't exist in the garage");
             }
 
             m_CustomersVehicles[i_LicenseNumber].VehicleStatus = eVehicleStatus;
-
-            return isNotAlreadyInTheGarage;
         }
 
         public void AddVehicle(
@@ -134,24 +100,16 @@ namespace Ex03.GarageLogic
             m_CustomersVehicles[i_LicenseNumber] = customerVehicle;
         }
 
-        public bool InflateAllTiresToMax(string i_LicenseNumber)
+        public void InflateAllTiresToMax(string i_LicenseNumber)
         {
-            isNotAlreadyInTheGarage = true;
-
-            if (!m_CustomersVehicles.ContainsKey(i_LicenseNumber))
-            {
-                isNotAlreadyInTheGarage = false;
-            }
-
             foreach (Wheel wheel in this.m_CustomersVehicles[i_LicenseNumber].Vehicle.Wheels)
             {
                 wheel.InflateWheel(wheel.MaxAirPressureByManufacturer - wheel.CurrentAirPressure);
             }
-
-            return isNotAlreadyInTheGarage;
         }
 
     }
+
 
 }
 

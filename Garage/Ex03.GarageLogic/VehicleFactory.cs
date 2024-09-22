@@ -52,7 +52,7 @@ namespace Ex03.GarageLogic
                 List<Wheel> Wheels = new List<Wheel>();
                 for (int i = 0; i < 2; i++)
                 {
-                    Wheels.Add(new Wheel(i_WheelsManufactorerName, 33f, i_AirInWheels));
+                    Wheels.Add(new Wheel(i_WheelsManufactorerName, 31f, i_AirInWheels));
                 }
                 vehicle = new Motorcycle(i_LicenseNumber, i_ModelName, fuelEngine, i_LicenseType, Wheels);
             }
@@ -63,18 +63,18 @@ namespace Ex03.GarageLogic
                 List<Wheel> Wheels = new List<Wheel>();
                 for (int i = 0; i < 2; i++)
                 {
-                    Wheels.Add(new Wheel(i_WheelsManufactorerName, 33f, i_AirInWheels));
+                    Wheels.Add(new Wheel(i_WheelsManufactorerName, 31f, i_AirInWheels));
                 }
                 vehicle = new Motorcycle(i_LicenseNumber, i_ModelName, electricEngine, i_LicenseType, Wheels);
             }
 
             else if (i_VehicleType == eVehicleType.Truck)
             {
-                FuelEngine fuelEngine = new FuelEngine(i_LeftEnergy / 49f * 100f, 49f, eFuelType.Octan95);
+                FuelEngine fuelEngine = new FuelEngine(i_LeftEnergy / 130f * 100f, 130f, eFuelType.Soler);
                 List<Wheel> Wheels = new List<Wheel>();
                 for (int i = 0; i < 14; i++)
                 {
-                    Wheels.Add(new Wheel(i_WheelsManufactorerName, 33f, i_AirInWheels));
+                    Wheels.Add(new Wheel(i_WheelsManufactorerName, 28f, i_AirInWheels));
                 }
                 vehicle = new Truck(i_LicenseNumber, i_ModelName, fuelEngine,
                                    i_IsTransportingDangerousLoads, i_TruckCargoVolume, Wheels);

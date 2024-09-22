@@ -48,6 +48,7 @@ namespace Ex03.GarageLogic.Types_of_vehicles
             carDetails.AppendLine(base.ToString());
             carDetails.AppendLine($"Color: {m_Color}");
             carDetails.AppendLine($"Number of Doors: {m_NumberOfDoors}");
+
             return carDetails.ToString();
         }
 

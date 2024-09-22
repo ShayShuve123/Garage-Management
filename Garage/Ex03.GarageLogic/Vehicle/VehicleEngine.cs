@@ -40,5 +40,17 @@ namespace Ex03.GarageLogic
 
         public abstract void FillEnergySource(float i_EnergySourceAmountToAdd,
                                               object i_IsFuelType = null);
+
+        public override string ToString()
+        {
+            StringBuilder engineDetails = new StringBuilder();
+
+            engineDetails.AppendLine("********** Engine Details **********");
+            engineDetails.AppendLine($"Energy Source Remaining Percentage: {m_EnergySourceRemainingPercentage}");
+            engineDetails.AppendLine($"Energy Source Max Capacity: {r_EnergySourceMaxCapacity}");
+            engineDetails.AppendLine("************************************");
+
+            return engineDetails.ToString();
+        }
     }
 }

@@ -61,16 +61,18 @@ namespace Ex03.GarageLogic
             }
             else
             {
-                throw new ValueOutOfRangeException(0, r_MaxAirPressureByManufacturer, "Cannot inflate beyond max air pressure.");
+                throw new ValueOutOfRangeException(0, r_MaxAirPressureByManufacturer,"Cannot inflate beyond the maximum air pressure. The wheels are already fully inflated.");
             }
         }
 
         public override string ToString()
         {
             StringBuilder wheelDetails = new StringBuilder();
+
             wheelDetails.AppendLine($"Manufacturer: {m_ManufacturerName}");
             wheelDetails.AppendLine($"Current Air Pressure: {m_CurrentAirPressure}");
             wheelDetails.AppendLine($"Max Air Pressure: {r_MaxAirPressureByManufacturer}");
+
             return wheelDetails.ToString();
         }
 

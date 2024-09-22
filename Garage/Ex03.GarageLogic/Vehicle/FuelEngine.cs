@@ -65,8 +65,9 @@ namespace Ex03.GarageLogic
         public override string ToString()
         {
             StringBuilder engineDetails = new StringBuilder();
-            engineDetails.Append($"Engine Type :Fuel");
-            engineDetails.AppendLine($"Fuel Type: {m_FuelType}");
+
+            engineDetails.Append($"Engine Type\n:Fuel");
+            engineDetails.AppendLine($"Fuel Type:{m_FuelType}");
             engineDetails.AppendLine($"Remaining Fuel in the Tank: {this.RemainingEnergyPercent}% (in liter)");
             engineDetails.Append($" Max Tank Capacity: {this.EnergySourceMaxCapacity} (in liter)");
 

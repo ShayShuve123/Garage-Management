@@ -47,6 +47,7 @@ namespace Ex03.GarageLogic.Types_of_vehicles
             truckDetails.AppendLine(base.ToString());
             truckDetails.AppendLine($"Carrying Hazardous Materials: {(m_IsCarryingHazardousMaterials ? "Yes" : "No")}");
             truckDetails.AppendLine($"Cargo Volume: {m_CargoVolume} cubic meters");
+
             return truckDetails.ToString();
         }
 

@@ -73,16 +73,23 @@ namespace Ex03.GarageLogic
 
         public override string ToString()
         {
+            int wheelNumber = 1;
             StringBuilder vehicleDetails = new StringBuilder();
 
             vehicleDetails.AppendLine($"License Number: {m_LicenseNumber}");
             vehicleDetails.AppendLine($"Model Name: {m_ModelName}");
-
-            vehicleDetails.AppendLine("Wheels Information:");
+            vehicleDetails.AppendLine("******************* Engine Details *******************");
+            vehicleDetails.AppendLine($"Engine: {m_Engine}");
+            vehicleDetails.AppendLine("******************* Wheels Information *******************");
+           
             foreach (Wheel wheel in m_Wheels)
             {
+                vehicleDetails.AppendLine($"Wheel {wheelNumber}:");
                 vehicleDetails.AppendLine(wheel.ToString());
+                wheelNumber++;
             }
+
+            vehicleDetails.AppendLine("****************************");
 
             return vehicleDetails.ToString();
         }

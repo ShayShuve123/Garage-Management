@@ -34,6 +34,7 @@ namespace Ex03.GarageLogic.Types_of_vehicles
             StringBuilder motorcycleDetails = new StringBuilder();
             motorcycleDetails.AppendLine(base.ToString());
             motorcycleDetails.AppendLine($"License Type: {m_LicenseType}");
+
             return motorcycleDetails.ToString();
         }
 
