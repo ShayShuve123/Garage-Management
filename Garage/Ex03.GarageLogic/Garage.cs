@@ -27,12 +27,12 @@ namespace Ex03.GarageLogic
             }
         }
 
-        public bool isLicenseNumExist(string i_LicenseNumber)
+        public bool IsLicenseNumExist(string i_LicenseNumber)
         {
             return m_CustomersVehicles.ContainsKey(i_LicenseNumber);
         }
 
-        public void chargeBattery(string i_LicenseNumber, float i_HoursToCharge)
+        public void ChargeBattery(string i_LicenseNumber, float i_HoursToCharge)
         {
             CustomerVehicle customerVehicle = m_CustomersVehicles[i_LicenseNumber];
 
@@ -46,7 +46,7 @@ namespace Ex03.GarageLogic
             }
         }
 
-        public void refuelVehicle(string i_LicenseNumber, float i_FuelToAdd, eFuelType i_FuelType)
+        public void RefuelVehicle(string i_LicenseNumber, float i_FuelToAdd, eFuelType i_FuelType)
         {
             CustomerVehicle customerVehicle = m_CustomersVehicles[i_LicenseNumber];
 
@@ -109,7 +109,6 @@ namespace Ex03.GarageLogic
         }
 
     }
-
 
 }
 

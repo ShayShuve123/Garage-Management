@@ -12,7 +12,7 @@ namespace Ex03.GarageLogic
                    : base(i_RemainingBatteryPercentage, i_MaxBatteryCapacity)
         {
         }
-
+        // $G$ DSN-999 (-5) why isFuelType is object?
         public override void FillEnergySource(float i_HoursToAdd, object i_IsFuelType = null)
         {
             float hourslToAddConvertedToPercent = (i_HoursToAdd * 100) / this.EnergySourceMaxCapacity;
@@ -28,7 +28,7 @@ namespace Ex03.GarageLogic
                 throw new ValueOutOfRangeException(0, maxPossibleHoursToAdd, "Cannot refuel beyond max tank capacity.");
             }
         }
-
+        // $G$ NTT-999 (-10) Should use Environment.NewLine rather than \n.
         public override string ToString()
         {
             StringBuilder engineDetails = new StringBuilder();

@@ -24,60 +24,68 @@ namespace Ex03.GarageLogic
         {
             Vehicle vehicle = null;
 
-            if (i_VehicleType == eVehicleType.FuelCar)
+            switch (i_VehicleType)
             {
-                FuelEngine fuelEngine = new FuelEngine(i_LeftEnergy / 49f * 100f, 49, eFuelType.Octan95);
-                List<Wheel> Wheels = new List<Wheel>();
-                for (int i = 0; i < 5; i++)
-                {
-                    Wheels.Add(new Wheel(i_WheelsManufactorerName, 33f, i_AirInWheels));
-                }
-                vehicle = new Car(i_LicenseNumber, i_ModelName, fuelEngine, i_Color, i_NumDoors, Wheels);
-            }
+                case eVehicleType.FuelCar:
+                    {
+                        FuelEngine fuelEngine = new FuelEngine(i_LeftEnergy / 49f * 100f, 49, eFuelType.Octan95);
+                        List<Wheel> Wheels = new List<Wheel>();
+                        for (int i = 0; i < 5; i++)
+                        {
+                            Wheels.Add(new Wheel(i_WheelsManufactorerName, 33f, i_AirInWheels));
+                        }
+                        vehicle = new Car(i_LicenseNumber, i_ModelName, fuelEngine, i_Color, i_NumDoors, Wheels);
+                        break;
+                    }
 
-            else if (i_VehicleType == eVehicleType.ElectricCar)
-            {
-                ElectricEngine electricEngine = new ElectricEngine(i_LeftEnergy / 5f * 100f, 5);
-                List<Wheel> Wheels = new List<Wheel>();
-                for (int i = 0; i < 5; i++)
-                {
-                    Wheels.Add(new Wheel(i_WheelsManufactorerName, 33f, i_AirInWheels));
-                }
-                vehicle = new Car(i_LicenseNumber, i_ModelName, electricEngine, i_Color, i_NumDoors, Wheels);
-            }
+                case eVehicleType.ElectricCar:
+                    {
+                        ElectricEngine electricEngine = new ElectricEngine(i_LeftEnergy / 5f * 100f, 5);
+                        List<Wheel> Wheels = new List<Wheel>();
+                        for (int i = 0; i < 5; i++)
+                        {
+                            Wheels.Add(new Wheel(i_WheelsManufactorerName, 33f, i_AirInWheels));
+                        }
+                        vehicle = new Car(i_LicenseNumber, i_ModelName, electricEngine, i_Color, i_NumDoors, Wheels);
+                        break;
+                    }
 
-            else if (i_VehicleType == eVehicleType.FuelMotorcycle)
-            {
-                FuelEngine fuelEngine = new FuelEngine(i_LeftEnergy / 6f * 100f, 6f, eFuelType.Octan98);
-                List<Wheel> Wheels = new List<Wheel>();
-                for (int i = 0; i < 2; i++)
-                {
-                    Wheels.Add(new Wheel(i_WheelsManufactorerName, 31f, i_AirInWheels));
-                }
-                vehicle = new Motorcycle(i_LicenseNumber, i_ModelName, fuelEngine, i_LicenseType, Wheels);
-            }
+                case eVehicleType.FuelMotorcycle:
+                    {
+                        FuelEngine fuelEngine = new FuelEngine(i_LeftEnergy / 6f * 100f, 6f, eFuelType.Octan98);
+                        List<Wheel> Wheels = new List<Wheel>();
+                        for (int i = 0; i < 2; i++)
+                        {
+                            Wheels.Add(new Wheel(i_WheelsManufactorerName, 31f, i_AirInWheels));
+                        }
+                        vehicle = new Motorcycle(i_LicenseNumber, i_ModelName, fuelEngine, i_LicenseType, Wheels);
+                        break;
+                    }
 
-            else if (i_VehicleType == eVehicleType.ElecricMotorcycle)
-            {
-                ElectricEngine electricEngine = new ElectricEngine(i_LeftEnergy / 2.7f * 100f, 2.7f);
-                List<Wheel> Wheels = new List<Wheel>();
-                for (int i = 0; i < 2; i++)
-                {
-                    Wheels.Add(new Wheel(i_WheelsManufactorerName, 31f, i_AirInWheels));
-                }
-                vehicle = new Motorcycle(i_LicenseNumber, i_ModelName, electricEngine, i_LicenseType, Wheels);
-            }
+                case eVehicleType.ElecricMotorcycle:
+                    {
+                        ElectricEngine electricEngine = new ElectricEngine(i_LeftEnergy / 2.7f * 100f, 2.7f);
+                        List<Wheel> Wheels = new List<Wheel>();
+                        for (int i = 0; i < 2; i++)
+                        {
+                            Wheels.Add(new Wheel(i_WheelsManufactorerName, 31f, i_AirInWheels));
+                        }
+                        vehicle = new Motorcycle(i_LicenseNumber, i_ModelName, electricEngine, i_LicenseType, Wheels);
+                        break;
+                    }
 
-            else if (i_VehicleType == eVehicleType.Truck)
-            {
-                FuelEngine fuelEngine = new FuelEngine(i_LeftEnergy / 130f * 100f, 130f, eFuelType.Soler);
-                List<Wheel> Wheels = new List<Wheel>();
-                for (int i = 0; i < 14; i++)
-                {
-                    Wheels.Add(new Wheel(i_WheelsManufactorerName, 28f, i_AirInWheels));
-                }
-                vehicle = new Truck(i_LicenseNumber, i_ModelName, fuelEngine,
-                                   i_IsTransportingDangerousLoads, i_TruckCargoVolume, Wheels);
+                case eVehicleType.Truck:
+                    {
+                        FuelEngine fuelEngine = new FuelEngine(i_LeftEnergy / 130f * 100f, 130f, eFuelType.Soler);
+                        List<Wheel> Wheels = new List<Wheel>();
+                        for (int i = 0; i < 14; i++)
+                        {
+                            Wheels.Add(new Wheel(i_WheelsManufactorerName, 28f, i_AirInWheels));
+                        }
+                        vehicle = new Truck(i_LicenseNumber, i_ModelName, fuelEngine,
+                                           i_IsTransportingDangerousLoads, i_TruckCargoVolume, Wheels);
+                        break;
+                    }
             }
 
             return vehicle;

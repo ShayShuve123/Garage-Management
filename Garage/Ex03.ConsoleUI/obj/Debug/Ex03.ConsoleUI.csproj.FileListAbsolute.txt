@@ -1,40 +1,10 @@
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\bin\Debug\Ex03.ConsoleUI.exe.config
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\bin\Debug\Ex03.ConsoleUI.exe
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\bin\Debug\Ex03.ConsoleUI.pdb
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\bin\Debug\Ex03.GarageLogic.dll
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\bin\Debug\Ex03.GarageLogic.pdb
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\obj\Debug\Ex03.ConsoleUI.csproj.AssemblyReference.cache
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\obj\Debug\Ex03.ConsoleUI.csproj.CoreCompileInputs.cache
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\obj\Debug\Ex03.Con.97A6B4C2.Up2Date
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\obj\Debug\Ex03.ConsoleUI.exe
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\obj\Debug\Ex03.ConsoleUI.pdb
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585 - Copy\Ex03.ConsoleUI\bin\Debug\Ex03.ConsoleUI.exe.config
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585 - Copy\Ex03.ConsoleUI\bin\Debug\Ex03.ConsoleUI.exe
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585 - Copy\Ex03.ConsoleUI\bin\Debug\Ex03.ConsoleUI.pdb
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585 - Copy\Ex03.ConsoleUI\bin\Debug\Ex03.GarageLogic.dll
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585 - Copy\Ex03.ConsoleUI\bin\Debug\Ex03.GarageLogic.pdb
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585 - Copy\Ex03.ConsoleUI\obj\Debug\Ex03.ConsoleUI.csproj.AssemblyReference.cache
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585 - Copy\Ex03.ConsoleUI\obj\Debug\Ex03.ConsoleUI.csproj.CoreCompileInputs.cache
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585 - Copy\Ex03.ConsoleUI\obj\Debug\Ex03.Con.97A6B4C2.Up2Date
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585 - Copy\Ex03.ConsoleUI\obj\Debug\Ex03.ConsoleUI.exe
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585 - Copy\Ex03.ConsoleUI\obj\Debug\Ex03.ConsoleUI.pdb
-C:\projects\c_sharp_michal\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\obj\Debug\Ex03.ConsoleUI.csproj.AssemblyReference.cache
-C:\projects\c_sharp_michal\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\obj\Debug\Ex03.ConsoleUI.csproj.CoreCompileInputs.cache
-C:\projects\c_sharp_michal\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\obj\Debug\Ex03.ConsoleUI.exe
-C:\projects\c_sharp_michal\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\obj\Debug\Ex03.ConsoleUI.pdb
-C:\projects\c_sharp_michal\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\bin\Debug\Ex03.ConsoleUI.exe.config
-C:\projects\c_sharp_michal\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\bin\Debug\Ex03.ConsoleUI.exe
-C:\projects\c_sharp_michal\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\bin\Debug\Ex03.ConsoleUI.pdb
-C:\projects\c_sharp_michal\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\bin\Debug\Ex03.GarageLogic.dll
-C:\projects\c_sharp_michal\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\bin\Debug\Ex03.GarageLogic.pdb
-C:\projects\c_sharp_michal\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\obj\Debug\Ex03.Con.97A6B4C2.Up2Date
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol2mical\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\bin\Debug\Ex03.ConsoleUI.exe.config
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol2mical\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\bin\Debug\Ex03.ConsoleUI.exe
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol2mical\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\bin\Debug\Ex03.ConsoleUI.pdb
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol2mical\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\bin\Debug\Ex03.GarageLogic.dll
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol2mical\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\bin\Debug\Ex03.GarageLogic.pdb
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol2mical\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\obj\Debug\Ex03.ConsoleUI.csproj.AssemblyReference.cache
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol2mical\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\obj\Debug\Ex03.ConsoleUI.csproj.CoreCompileInputs.cache
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol2mical\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\obj\Debug\Ex03.Con.97A6B4C2.Up2Date
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol2mical\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\obj\Debug\Ex03.ConsoleUI.exe
-C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\sol2mical\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\obj\Debug\Ex03.ConsoleUI.pdb
+C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\SOL FROM GUY WITH REPORT\reportGUY\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\bin\Debug\Ex03.ConsoleUI.exe.config
+C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\SOL FROM GUY WITH REPORT\reportGUY\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\bin\Debug\Ex03.ConsoleUI.exe
+C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\SOL FROM GUY WITH REPORT\reportGUY\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\bin\Debug\Ex03.ConsoleUI.pdb
+C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\SOL FROM GUY WITH REPORT\reportGUY\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\bin\Debug\Ex03.GarageLogic.dll
+C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\SOL FROM GUY WITH REPORT\reportGUY\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\bin\Debug\Ex03.GarageLogic.pdb
+C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\SOL FROM GUY WITH REPORT\reportGUY\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\obj\Debug\Ex03.ConsoleUI.csproj.AssemblyReference.cache
+C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\SOL FROM GUY WITH REPORT\reportGUY\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\obj\Debug\Ex03.ConsoleUI.csproj.CoreCompileInputs.cache
+C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\SOL FROM GUY WITH REPORT\reportGUY\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\obj\Debug\Ex03.Con.97A6B4C2.Up2Date
+C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\SOL FROM GUY WITH REPORT\reportGUY\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\obj\Debug\Ex03.ConsoleUI.exe
+C:\Users\97254\Desktop\Degree\Third year\OPP_ c# and the .NET Framework\Assignment_3\SOL FROM GUY WITH REPORT\reportGUY\C24 Ex03 MichalHadad 312147440 ShayShuv 206842585\Ex03.ConsoleUI\obj\Debug\Ex03.ConsoleUI.pdb

@@ -9,6 +9,7 @@ namespace Ex03.GarageLogic.Types_of_vehicles
     {
         private bool m_IsCarryingHazardousMaterials;
         private float m_CargoVolume;
+
         public Truck(string i_LicenseNumber, string i_ModelName, VehicleEngine i_Engine,
                      bool i_IsCarryingHazardousMaterials, float i_CargoVolume, List<Wheel> i_Wheels)
                 : base(i_LicenseNumber, i_ModelName, i_Engine, i_Wheels)
@@ -37,6 +38,11 @@ namespace Ex03.GarageLogic.Types_of_vehicles
             }
             set
             {
+                if (value < 0)
+                {
+                    throw new ValueOutOfRangeException(0, float.MaxValue, "Cargo volume cannot be negative.");
+                }
+
                 m_CargoVolume = value;
             }
         }

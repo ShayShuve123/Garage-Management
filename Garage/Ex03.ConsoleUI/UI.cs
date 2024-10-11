@@ -10,27 +10,22 @@ using System.Threading;
 using static Ex03.GarageLogic.Enums;
 using System.Text.RegularExpressions;
 
-
 namespace Ex03.ConsoleUI
 {
     public class UI
     {
-        private Garage s_Garage = new Garage();
+        private GarageMenu m_GarageMenu;
+        private Garage m_Garage;
+        private GarageDisplay m_GarageDisplay;
         Enums.eVehicleType VehicleTypeT;
 
-        private string[] m_GarageMenu = new string[]
-              {
+        public UI()
+        {
+            m_GarageMenu = new GarageMenu();
+            m_Garage = new Garage();
+            m_GarageDisplay = new GarageDisplay(m_Garage);
 
-            "Please enter one of the below options (1 - 8):",
-            "1) Add a new vehicle to the garage",
-            "2) Show all vehicle license plates",
-            "3) Update vehicle status",
-            "4) Inflate all tires",
-            "5) Refuel a vehicle",
-            "6) Charge a vehicle",
-            "7) Show detailed information for a vehicle",
-            "8) Exit\n"
-        };
+        }
 
         public void StartGarageMenu()
         {
@@ -48,10 +43,12 @@ namespace Ex03.ConsoleUI
                     Console.ReadKey();
                     Console.Clear();
                     Console.WriteLine(" Please choose how we can assist you with your vehicle's needs :)");
-                    displayGarageMenu();
+
+                    m_GarageMenu.DisplayMenu(); 
                     userInput = getInput("selectedoptionfrommenu");
                     validInput = true;
                     selectedOption = int.Parse(userInput);
+
                     if (selectedOption == 8)
                     {
                         Console.Clear();
@@ -61,17 +58,10 @@ namespace Ex03.ConsoleUI
                     }
                 }
                 while (validInput != true);
+
                 userChoice(selectedOption);
             }
 
-        }
-
-        private void displayGarageMenu()
-        {
-            foreach (string option in m_GarageMenu)
-            {
-                Console.WriteLine(option);
-            }
         }
 
         private void userChoice(int i_UserSelectedOption)
@@ -93,7 +83,7 @@ namespace Ex03.ConsoleUI
                         break;
 
                     case 4:
-                        inflateAllTiresToMax();
+                        InflateAllTiresToMax();
                         break;
 
                     case 5:
@@ -134,18 +124,18 @@ namespace Ex03.ConsoleUI
             Console.Write("Please enter the license number: ");
             string licenseNum = getInput("numbers");
 
-            if (!s_Garage.isLicenseNumExist(licenseNum))
+            if (!m_Garage.IsLicenseNumExist(licenseNum))
             {
                 addNewVehicleToGarage(licenseNum);
             }
             else
             {
                 Console.WriteLine("Vehicle is already in the garage. Changing its status to 'in repair'");
-                s_Garage.ChangeVehicleStatus(licenseNum, eVehicleStatus.InRepair);
+                m_Garage.ChangeVehicleStatus(licenseNum, eVehicleStatus.InRepair);
             }
         }
-
-        private void addNewVehicleToGarage(string i_licenseNumber)
+  
+        private void addNewVehicleToGarage(string i_LicenseNumber)
         {
             CustomerVehicle customer;
             customer = createNewCustomer();
@@ -208,8 +198,8 @@ namespace Ex03.ConsoleUI
 
             }
 
-            s_Garage.AddVehicle(customer.CustomerName, customer.CustomerPhoneNumber,
-                            i_licenseNumber,
+            m_Garage.AddVehicle(customer.CustomerName, customer.CustomerPhoneNumber,
+                            i_LicenseNumber,
                             LicenseType,
                             VehicleType,
                             ModelName,
@@ -220,11 +210,10 @@ namespace Ex03.ConsoleUI
                             TruckCargoVolume,
                             IsTransportingDangerousLoads);
 
-            Console.WriteLine($"\nVehicle with license {i_licenseNumber} successfully added to the garage.\n");
+            Console.WriteLine($"\nVehicle with license {i_LicenseNumber} successfully added to the garage.\n");
         }
 
-
-        public CustomerVehicle createNewCustomer()
+        private CustomerVehicle createNewCustomer()
         {
             string vehicleClientName, vehicleClientPhoneNumber;
 
@@ -236,7 +225,7 @@ namespace Ex03.ConsoleUI
             return new CustomerVehicle(vehicleClientName, vehicleClientPhoneNumber);
         }
 
-        public string getInput(string inputType)
+        public string getInput(string i_InputType)
         {
             string userInput;
             bool isUserInputValid = false;
@@ -244,7 +233,7 @@ namespace Ex03.ConsoleUI
             do
             {
                 userInput = Console.ReadLine();
-                isUserInputValid = isValidInput(userInput, inputType);
+                isUserInputValid = isValidInput(userInput, i_InputType);
 
                 if (!isUserInputValid)
                 {
@@ -256,7 +245,7 @@ namespace Ex03.ConsoleUI
             return userInput.Trim();
         }
 
-        public bool isValidInput(string inputUser, string inputType)
+        public bool isValidInput(string i_InputUser, string i_InputType)
         {
             bool isValid = true;
             Regex regex;
@@ -264,17 +253,16 @@ namespace Ex03.ConsoleUI
 
             try
             {
-                if (string.IsNullOrEmpty(inputUser))
+                if (string.IsNullOrEmpty(i_InputUser))
                 {
-                    throw new ArgumentException("Input cannot be empty.");
                     throw new ArgumentException("Input cannot be empty.");
                 }
 
-                switch (inputType.ToLower())
+                switch (i_InputType.ToLower())
                 {
                     case "letter":
                         regex = new Regex(@"^[a-zA-Z]+$");
-                        if (!regex.IsMatch(inputUser))
+                        if (!regex.IsMatch(i_InputUser))
                         {
                             throw new FormatException("Must contain only English letters.");
                         }
@@ -282,7 +270,7 @@ namespace Ex03.ConsoleUI
 
                     case "letterandnumbers":
                         regex = new Regex(@"^[a-zA-Z0-9]+$");
-                        if (!regex.IsMatch(inputUser))
+                        if (!regex.IsMatch(i_InputUser))
                         {
                             throw new FormatException("Must contain only English letters and digits.");
                         }
@@ -290,7 +278,7 @@ namespace Ex03.ConsoleUI
 
                     case "phone":
                         regex = new Regex(@"^\d{10}$");
-                        if (!regex.IsMatch(inputUser))
+                        if (!regex.IsMatch(i_InputUser))
                         {
                             throw new FormatException("Phone number must contain exactly 10 digits.");
                         }
@@ -298,14 +286,14 @@ namespace Ex03.ConsoleUI
 
                     case "vehicletype":
                         regex = new Regex(@"^[1-5]$");
-                        if (!regex.IsMatch(inputUser))
+                        if (!regex.IsMatch(i_InputUser))
                         {
                             throw new FormatException("Invalid vehicle type. Please enter a number between 1 and 5.");
                         }
                         break;
                     case "choicebetweenontofour":
                         regex = new Regex(@"^[1-4]$");
-                        if (!regex.IsMatch(inputUser))
+                        if (!regex.IsMatch(i_InputUser))
                         {
                             throw new FormatException("Invalid type. Please enter a number between 1 and 4.");
                         }
@@ -314,18 +302,18 @@ namespace Ex03.ConsoleUI
                     case "islicenseingarage":
 
                         regex = new Regex(@"^\d+$");
-                        if (!regex.IsMatch(inputUser))
+                        if (!regex.IsMatch(i_InputUser))
                         {
                             throw new FormatException("Must include only digits (integer)");
                         }
-                        if (!s_Garage.isLicenseNumExist(inputUser))
+                        if (!m_Garage.IsLicenseNumExist(i_InputUser))
                         {
                             throw new ArgumentException("License number doesn't exist in garage");
                         }
                         break;
 
                     case "float":
-                        if (!float.TryParse(inputUser, out inputUserConvertedToFloat))
+                        if (!float.TryParse(i_InputUser, out inputUserConvertedToFloat))
                         {
                             throw new FormatException("Invalid input. Please enter a valid float number.");
                         }
@@ -333,7 +321,7 @@ namespace Ex03.ConsoleUI
 
                     case "numbers":
                         regex = new Regex(@"^\d+$");
-                        if (!regex.IsMatch(inputUser))
+                        if (!regex.IsMatch(i_InputUser))
                         {
                             throw new FormatException("Must include only digits (integer)");
                         }
@@ -341,7 +329,7 @@ namespace Ex03.ConsoleUI
 
                     case "yesno":
                         regex = new Regex(@"^[1-2]$");
-                        if (!regex.IsMatch(inputUser))
+                        if (!regex.IsMatch(i_InputUser))
                         {
                             throw new FormatException("Invalid choice. Please enter 1 (Yes) or 2 (No).");
                         }
@@ -349,7 +337,7 @@ namespace Ex03.ConsoleUI
 
                     case "enumstatus":
                         regex = new Regex(@"^[1-3]$");
-                        if (!regex.IsMatch(inputUser))
+                        if (!regex.IsMatch(i_InputUser))
                         {
                             throw new FormatException("Invalid status. Please enter a number between 1 (InRepair), 2 (Repaired), or 3 (Paid).");
                         }
@@ -357,25 +345,25 @@ namespace Ex03.ConsoleUI
 
                     case "selectedoptionfrommenu":
                         regex = new Regex(@"^[1-8]$");
-                        if (!regex.IsMatch(inputUser))
+                        if (!regex.IsMatch(i_InputUser))
                         {
                             throw new FormatException("Please enter a number between 1 and 8, (8-Exit).");
                         }
                         break;
 
                     case "remainingenergy":
-                        if (!float.TryParse(inputUser, out inputUserConvertedToFloat))
+                        if (!float.TryParse(i_InputUser, out inputUserConvertedToFloat))
                         {
                             throw new FormatException("Invalid energy input. Must be a valid float.");
                         }
                         else
-                        {
+                        { 
                             switch (VehicleTypeT)
                             {
                                 case Enums.eVehicleType.FuelMotorcycle:
                                     if (inputUserConvertedToFloat < 0 || inputUserConvertedToFloat > 6)
                                     {
-                                        throw new ValueOutOfRangeException(0, 6, "Fuel for regular motorcycle must be between 0 and 6 liters.");
+                                        throw new ValueOutOfRangeException(0, 6f, "Fuel for regular motorcycle must be between 0 and 6 liters.");
                                     }
                                     break;
 
@@ -415,7 +403,7 @@ namespace Ex03.ConsoleUI
                         break;
 
                     case "airpressure":
-                        if (!float.TryParse(inputUser, out inputUserConvertedToFloat))
+                        if (!float.TryParse(i_InputUser, out inputUserConvertedToFloat))
                         {
                             throw new FormatException("Invalid air pressure input. Must be a valid float.");
                         }
@@ -506,58 +494,26 @@ namespace Ex03.ConsoleUI
             }
 
         }
+
         private void showAllLicensePlates()
         {
-            Console.WriteLine("Do you want to filter by vehicle status?");
-            Console.WriteLine("1) Yes");
-            Console.WriteLine("2) No");
-
-            string filterChoice = getInput("yesno");
-            bool filterByStatus = filterChoice == "1";
-
-            if (filterByStatus)
-            {
-                Console.WriteLine("Please select the status to filter by:");
-                Console.WriteLine("1) In Repair");
-                Console.WriteLine("2) Repaired");
-                Console.WriteLine("3) Paid");
-                string statusChoice = getInput("enumstatus");
-                Enums.eVehicleStatus chosenStatus = (Enums.eVehicleStatus)int.Parse(statusChoice);
-                Console.Write($"\nVehicles with status {chosenStatus}:\n");
-
-                foreach (var vehicle in s_Garage.CustomerVehicles)
-                {
-                    if (vehicle.Value.VehicleStatus == chosenStatus)
-                    {
-                        Console.WriteLine(vehicle.Key);
-                    }
-                }
-            }
-            else
-            {
-                Console.WriteLine("\nAll vehicle license plates in the garage:\n");
-                foreach (var vehicle in s_Garage.CustomerVehicles)
-                {
-                    Console.WriteLine(vehicle.Key);
-                }
-            }
-
+            m_GarageDisplay.ShowAllLicensePlates(); 
         }
 
-        public void updateVehicleStatus()
+        private void updateVehicleStatus()
         {
             Console.WriteLine("Please enter the license number:");
             string licenseNumber = getInput("islicenseingarage");
             Enums.eVehicleStatus eVehicleStatus = getVehicleStatusFromUser();
-            s_Garage.ChangeVehicleStatus(licenseNumber, eVehicleStatus);
+            m_Garage.ChangeVehicleStatus(licenseNumber, eVehicleStatus);
         }
 
-        public void inflateAllTiresToMax()
+        public void InflateAllTiresToMax()
         {
             Console.Clear();
             Console.WriteLine("Please enter the license number:");
             string licenseNumber = getInput("IsLicenseInGarage");
-            CustomerVehicle customerVehicle = s_Garage.CustomerVehicles[licenseNumber];
+            CustomerVehicle customerVehicle = m_Garage.CustomerVehicles[licenseNumber];
 
             foreach (Wheel wheel in customerVehicle.Vehicle.Wheels)
             {
@@ -565,7 +521,7 @@ namespace Ex03.ConsoleUI
                 Console.WriteLine($"Max air pressure: {wheel.MaxAirPressureByManufacturer}");
             }
 
-            s_Garage.InflateAllTiresToMax(licenseNumber);
+            m_Garage.InflateAllTiresToMax(licenseNumber);
             Console.WriteLine("All tires have been successfully inflated to their maximum pressure.");
         }
 
@@ -580,23 +536,21 @@ namespace Ex03.ConsoleUI
 
             Console.Write("Please enter how much fuel liters to add:");
             float fuelToAdd = float.Parse(Console.ReadLine());
-            s_Garage.refuelVehicle(licenseNumber, fuelToAdd, FuelType);
+            m_Garage.RefuelVehicle(licenseNumber, fuelToAdd, FuelType);
             Console.WriteLine("Vehicle refueled successfully.");
         }
 
         private void showVehicleDetails()
         {
-            Console.Clear();
-            Console.Write("Please enter the license number:");
+            Console.Write("Please enter the license number: ");
             string licenseNumber = getInput("IsLicenseInGarage");
-            ShowFullVehicleDetails(licenseNumber);
+            m_GarageDisplay.ShowVehicleDetails(licenseNumber);
         }
 
-        public void ShowFullVehicleDetails(string i_LicenseNumber)
+        private void showFullVehicleDetails(string i_LicenseNumber)
         {
-            CustomerVehicle customerVehicle = s_Garage.CustomerVehicles[i_LicenseNumber];
-            Console.WriteLine("******************* Vehicle Details *******************\n");
-            Console.WriteLine(customerVehicle.ToString());
+            m_GarageDisplay.ShowFullVehicleDetails(i_LicenseNumber); 
+
         }
 
         private void rechargeBattery()
@@ -610,7 +564,7 @@ namespace Ex03.ConsoleUI
 
             if (float.TryParse(hoursToChargeStr, out float hoursToCharge))
             {
-                s_Garage.chargeBattery(licenseNumber, hoursToCharge);
+                m_Garage.ChargeBattery(licenseNumber, hoursToCharge);
                 Console.WriteLine("The vehicle has been successfully charged.\n");
             }
             else

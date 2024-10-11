@@ -18,6 +18,7 @@ namespace Ex03.GarageLogic.Types_of_vehicles
             this.m_Color = i_Color;
             this.m_NumberOfDoors = i_NumberOfDoors;
         }
+
         public eVehicleColor Color
         {
             get
